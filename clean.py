@@ -10,6 +10,8 @@ def clean(contact_info_file, other_info_file, ):
     respondent.dropna(inplace=True)
     respondent = respondent[~(respondent.job.str.contains("insurance|Insurance"))]
 
+    print(respondent.shape)
+
     return respondent
 
 
